@@ -45,8 +45,11 @@ export default function App() {
   }, [running, remaining]);
 
   useEffect(() => {
+    if (!running || remaining <= 0) return;
+    const prevMinute = lastMinuteRef.current;
     const minutesPassed = Math.floor((duration - remaining) / 60000);
-    if (running && remaining > 0 && minutesPassed > lastMinuteRef.current) {
+    // Announce only after a full minute has passed
+    if (minutesPassed > prevMinute && (duration - remaining) % 60000 === 0) {
       speak('Next bite', volume);
       lastMinuteRef.current = minutesPassed;
     }
