@@ -6,11 +6,12 @@
     "vite": "^7.1.5",
     "@vitejs/plugin-react": "^4.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "cross-env": "^7.0.3"
   },
   "scripts": {
-    "dev": "node ./node_modules/vite/bin/vite.js",
-    "build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "node ./node_modules/vite/bin/vite.js preview"
+    "dev": "cross-env ROLLUP_SKIP_NODE_NATIVE=1 node ./node_modules/vite/bin/vite.js",
+    "build": "cross-env ROLLUP_SKIP_NODE_NATIVE=1 node ./node_modules/vite/bin/vite.js build",
+    "preview": "cross-env ROLLUP_SKIP_NODE_NATIVE=1 node ./node_modules/vite/bin/vite.js preview"
   }
 }

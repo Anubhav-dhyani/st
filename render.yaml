@@ -1,0 +1,12 @@
+services:
+  - type: static_site
+    name: next-bite
+    env:
+      - key: NODE_VERSION
+        value: 20.16.0
+    buildCommand: npm ci && npm run build
+    publishPath: frontend/dist
+    headers:
+      - path: "/*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"

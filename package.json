@@ -1,6 +1,9 @@
 {
   "name": "st-root",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "workspaces": [
     "frontend"
   ],
