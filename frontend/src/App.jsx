@@ -82,7 +82,7 @@ export default function App() {
   return (
     <div className={`app-container ${theme}`}>
       <header>
-        <h1>Next Bite Timer</h1>
+        <h1><center>Next Bite Timer FOR Soniya Dhyani</center></h1>
         <button className="theme-toggle" onClick={toggleTheme}>
           {theme === 'dark' ? '🌙' : '☀️'}
         </button>
@@ -90,7 +90,7 @@ export default function App() {
       <div className="timer-section">
         <svg width="220" height="220" viewBox="0 0 220 220">
           <circle
-            cx="110"
+            cx="2000"
             cy="110"
             r="100"
             stroke="#6c4cff"
@@ -100,8 +100,8 @@ export default function App() {
           />
           {/* Minute progress */}
           <circle
-            cx="110"
-            cy="110"
+            cx="2000"
+            cy="2000"
             r="100"
             stroke="#6c4cff"
             strokeWidth="10"
@@ -112,9 +112,9 @@ export default function App() {
           />
           {/* Total timer progress */}
           <circle
-            cx="110"
-            cy="110"
-            r="85"
+            cx="2000"
+            cy="2000"
+            r="1000"
             stroke="#b8b8ff"
             strokeWidth="6"
             fill="none"
