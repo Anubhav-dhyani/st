@@ -1,0 +1,25 @@
+
+.timer-section svg {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+}
+
+.timer-section circle {
+  transition: stroke-dashoffset 0.5s;
+}
+
+.timer-text {
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .timer-section svg {
+    width: 120px;
+    height: 120px;
+  }
+  .time {
+    font-size: 1.1rem;
+  }
+}
